@@ -166,11 +166,11 @@ export class AwsCdkConstructLibrary extends ConstructLibrary {
     } else if (cdkMajorVersion === 1) {
       // CDK 1.x is built on constructs 3.x
       this.addPeerDeps('constructs@^3.2.27');
-      this.addCdkDependencies(['@aws-cdk/core']);
+      this.addCdkDependencies('@aws-cdk/core');
     } else if (cdkMajorVersion == 2) {
       // CDK 2.x is built on constructs 10.x
       this.addPeerDeps('constructs@^10.0.5');
-      this.addCdkDependencies(['aws-cdk-lib']);
+      this.addCdkDependencies('aws-cdk-lib');
     } else {
       // Otherwise, let the user manage which version they use
       this.addPeerDeps('constructs');
